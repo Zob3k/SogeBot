@@ -191,7 +191,7 @@ var commons = {
   },
   withFilters: function (text) {
     var filtersRegExp = new RegExp('\\$(' + _.sortBy(_.keys(translations.responses.variable), (o) => -o.length).join('|') + ')', 'g')
-    return text.replace(filtersRegExp, '<span contenteditable="false" class="editable-variable" data-lang="responses.variable.$1"></span><span class="remove"></span>&nbsp;')
+    return text.replace(filtersRegExp, '<span class="editable-variable" data-lang="responses.variable.$1"></span><span class="remove"></span>&nbsp;')
   },
   cleanResponseText: function (text) {
     return $(`<div>
